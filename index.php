@@ -15,6 +15,10 @@ $lengthSpeech = strlen($speech);
 // var_dump($_GET);
 $censuredWord = $_GET["censuredWord"];
 // echo $censuredWord;
+$newWord = "***";
+$replacedWord = str_replace($censuredWord, $newWord, $speech);
+$lengthReplacedSpeech = strlen($replacedWord);
+// echo $replacedWord;
 
 
 
@@ -30,8 +34,14 @@ $censuredWord = $_GET["censuredWord"];
 </head>
 <body>
     <div>
+        <h2>Paragrafo originale</h2>
          <p> <?php echo $speech;?> </p>
         <span> La lunghezza del paragrafo è: <?php echo $lengthSpeech; ?> </span>
+    </div>
+    <div>
+        <h2>Paragrafo con parole censurate</h2>
+         <p> <?php echo $replacedWord;?> </p>
+        <span> La lunghezza del paragrafo è: <?php echo $lengthReplacedSpeech; ?> </span>
     </div>
 </body>
 </html>
