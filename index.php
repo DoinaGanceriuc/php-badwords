@@ -10,13 +10,19 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 // variabili
 $speech = "Dunque, miei concittadini americani, non chiedete cosa il vostro paese può fare per voi, chiedete cosa potete fare voi per il vostro paese. Concittadini del mondo, non chiedete cosa l'America può fare per voi, ma cosa possiamo fare, insieme, per la libertà dell'uomo.";
 
+/* trasform speech to lower case */
+$lowerSpeech = strtolower($speech);
+
 $lengthSpeech = strlen($speech);
 
 // var_dump($_GET);
 $censuredWord = $_GET["censuredWord"];
+/* trasform censured word to lower case */
+$lowerCensuredWord = strtolower($censuredWord);
 // echo $censuredWord;
+
 $newWord = "***";
-$replacedWord = str_replace($censuredWord, $newWord, $speech);
+$replacedWord = str_replace($lowerCensuredWord, $newWord, $lowerSpeech);
 $lengthReplacedSpeech = strlen($replacedWord);
 // echo $replacedWord;
 
