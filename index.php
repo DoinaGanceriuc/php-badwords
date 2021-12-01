@@ -44,6 +44,13 @@ $lengthReplacedSpeech = strlen($replacedWord);
          <p> <?php echo $speech;?> </p>
         <span> La lunghezza del paragrafo è: <?php echo $lengthSpeech; ?> </span>
     </div>
+    <div style="padding-top:2rem;">
+        
+        <form method="get">
+       <span>Digita una parola del testo da nascondere</span> <input type="text" name="censuredWord">
+        <input type="submit" value="invia">
+   </form>
+    </div>
     <div>
         <h2>Paragrafo con parole censurate</h2>
          <p> <?php echo $replacedWord;?> </p>
