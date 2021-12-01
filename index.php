@@ -12,6 +12,10 @@ $speech = "Dunque, miei concittadini americani, non chiedete cosa il vostro paes
 
 $lengthSpeech = strlen($speech);
 
+// var_dump($_GET);
+$censuredWord = $_GET["censuredWord"];
+// echo $censuredWord;
+
 
 
 ?>
